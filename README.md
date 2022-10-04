@@ -11,7 +11,7 @@ Time spent: **7** hours spent in total
 The following **required** functionality is completed:
 
 - [x] **At least one health metric is tracked (based on user input)**
-  - Chosen metric(s): `[TODO: FILL ME IN TO GET CREDIT]`
+  - Chosen metric(s): Sleep
 - [x] **There is a "create entry" UI that prompts users to make their daily entry**
 - [ ] **New entries are saved in a database and then updated in the RecyclerView**
 - [ ] **On application restart, previously entered entries are preserved (i.e., are *persistent*)**
@@ -31,10 +31,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/gomg3Wd73g.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with [Recordit](https://www.recordit.co)
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
