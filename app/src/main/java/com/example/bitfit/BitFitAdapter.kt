@@ -12,10 +12,11 @@ class BitFitAdapter (private val context: Context, private val days: MutableList
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener{
 
-        private val dateTv = itemView.findViewById<TextView>(R.id.dateTv)
-        private val commentsTv = itemView.findViewById<TextView>(R.id.commentsTv)
-        private val hoursTv = itemView.findViewById<TextView>(R.id.hoursTv)
-        private val ratingTv = itemView.findViewById<TextView>(R.id.ratingTv)
+        var nap: DAY? = null
+        val dateTv = itemView.findViewById<TextView>(R.id.dateTv)
+        val commentsTv = itemView.findViewById<TextView>(R.id.commentsTv)
+        val hoursTv = itemView.findViewById<TextView>(R.id.hoursTv)
+        val ratingTv = itemView.findViewById<TextView>(R.id.ratingTv)
 
         fun bind(day: DAY){
             dateTv.text = day.date
@@ -45,6 +46,11 @@ class BitFitAdapter (private val context: Context, private val days: MutableList
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val pos = days[position]
+        holder.nap = pos
+        holder.dateTv.text = pos.date
+        holder.commentsTv.text = pos.comments
+        holder.ratingTv.text = pos.rating.toString()
+        holder.hoursTv.text = pos.hours.toString()
         holder.bind(pos)
     }
 }

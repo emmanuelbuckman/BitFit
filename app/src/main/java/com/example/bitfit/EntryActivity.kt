@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-
+/*
 class EntryActivity : AppCompatActivity() {
 
     private lateinit var dateEv: EditText
@@ -32,3 +32,5 @@ class EntryActivity : AppCompatActivity() {
         }
     }
 }
+
+     */

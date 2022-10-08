@@ -12,17 +12,17 @@ abstract class AppDatabase : RoomDatabase() {
 
     companion object{
         @Volatile
-        private var instance: AppDatabase? = null
+        private var INSTANCE: AppDatabase? = null
 
         fun getInstance(context: Context): AppDatabase =
-            (instance ?: synchronized(this){
-                instance?: buildDatabase(context).also { instance = it }
-            }) as AppDatabase
+            INSTANCE ?: synchronized(this){
+                INSTANCE?: buildDatabase(context).also { INSTANCE = it }
+            }
 
-        private fun buildDatabase(context: Context) {
+        private fun buildDatabase(context: Context) =
             Room.databaseBuilder(
                 context.applicationContext, AppDatabase::class.java, "Days-db"
             ).build()
-        }
+
     }
 }
